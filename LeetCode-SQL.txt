@@ -1,11 +1,13 @@
 ==============================================================================
 1757. Recyclable and Low Fat Products
 
-SELECT
-    product_id
-FROM
-    Products
-WHERE
-    low_fats = 'Y' AND recyclable = 'Y'
+SELECT product_id
+FROM Products
+WHERE low_fats = 'Y' AND recyclable = 'Y'
 
+==============================================================================
+
+584. Find Customer Referee
+Solution 1: select name from customer where referee_id != 2 or referee_id is null;
+Solution 2: select name from customer where IFNULL(referee_id,0) <> 2;
 ==============================================================================
