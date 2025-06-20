@@ -1,4 +1,5 @@
 ==============================================================================
+
 1757. Recyclable and Low Fat Products
 
 SELECT product_id
@@ -8,6 +9,23 @@ WHERE low_fats = 'Y' AND recyclable = 'Y'
 ==============================================================================
 
 584. Find Customer Referee
+
 Solution 1: select name from customer where referee_id != 2 or referee_id is null;
 Solution 2: select name from customer where IFNULL(referee_id,0) <> 2;
+
 ==============================================================================
+
+595. Big Countries
+
+Solution 1: SELECT name, population, area FROM world
+where area >= 3000000 or population >= 25000000
+
+Solution 2:
+SELECT name, population, area FROM world
+where area >= 3000000
+UNION
+SELECT name, population, area FROM world
+where population >=25000000
+
+==============================================================================
+

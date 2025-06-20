@@ -8,3 +8,6 @@ SELECT NAME FROM CITY where population > 120000 AND CountryCode = 'USA';
 Select All
 SELECT * FROM CITY;
 ==============================================================================
+Select by ID
+select * from CITY where id = 1661;
+==============================================================================
