@@ -8,3 +8,8 @@ do
     echo $i
 done
 ==============================================================================
+Personalized Echo
+read name
+Solution 1: echo "Welcome $name"
+Solution 2: printf "%s" "Welcome $name"
+==============================================================================
