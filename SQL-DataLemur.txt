@@ -1,0 +1,21 @@
+===================================================================================
+Problem: Histogram of Tweets
+select
+    per_user as tweet_bucket,
+    count(per_user)
+from
+    (
+        select
+            count(1) per_user
+        from
+            tweets
+        where
+            tweet_date BETWEEN '2022-01-01'
+            and '2022-12-31'
+        group by
+            user_id
+    ) sub
+GROUP BY
+    per_user
+
+===================================================================================

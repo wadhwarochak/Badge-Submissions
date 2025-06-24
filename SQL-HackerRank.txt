@@ -3,4 +3,8 @@ Problem: Revising the Select Query I
 
 SELECT * FROM CITY WHERE POPULATION > 100000 and CountryCode = 'USA';
 ===================================================================================
+Problem: Revising the Select Query II
+
+SELECT NAME FROM CITY WHERE POPULATION > 120000 and CountryCode = 'USA';
+===================================================================================
 
