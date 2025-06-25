@@ -7,3 +7,9 @@ Problem: 584. Find Customer Referee
 
 SELECT name from Customer where referee_id != 2 or referee_id is null;
 ===================================================================================
+Problem: 595. Big Countries
+
+SELECT name, population, area from World
+where area >= 3000000 
+or population >= 25000000;
+===================================================================================
