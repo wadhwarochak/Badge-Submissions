@@ -15,3 +15,11 @@ Problem: Select By ID
 
 SELECT * FROM CITY where ID = 1661;
 ===================================================================================
+Problem: Japanese Cities Attributes
+
+SELECT * FROM CITY where COUNTRYCODE ='JPN';
+===================================================================================
+Problem: Japanese Cities Names
+
+SELECT NAME FROM CITY where COUNTRYCODE ='JPN';
+===================================================================================
