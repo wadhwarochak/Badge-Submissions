@@ -27,3 +27,8 @@ Problem: Weather Observation Station 1
 
 SELECT CITY, STATE from STATION;
 ===================================================================================
+Problem: Weather Observation Station 3
+
+SELECT DISTINCT CITY from STATION where ID % 2 = 0;
+===================================================================================
+
