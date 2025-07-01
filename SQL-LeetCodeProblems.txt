@@ -306,8 +306,11 @@ Easy
 2356. Number of Unique Subjects Taught by Each Teacher
 89.3%
 Easy
-
+===================================================================================
 1581. Customer Who Visited but Did Not Make Any Transactions
-67.4%
-Easy
+
+SELECT customer_id, count(customer_id) as count_no_trans from Visits
+where visit_id not in (Select visit_id from Transactions)
+group by customer_id;
+===================================================================================
 
