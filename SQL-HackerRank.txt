@@ -35,9 +35,13 @@ Problem: Weather Observation Station 4
 
 SELECT COUNT(CITY) - COUNT(DISTINCT(CITY)) from STATION;
 ===================================================================================
-Problem: Weather Observation Station 4
+Problem: Weather Observation Station 6
 
 SELECT CITY FROM STATION where CITY REGEXP '^[aeiouAEIOU]';
+===================================================================================
+Problem: Weather Observation Station 7
+
+SELECT DISTINCT CITY FROM STATION where CITY REGEXP '[aeiou]$';
 ===================================================================================
 
 
