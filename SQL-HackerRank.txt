@@ -60,3 +60,8 @@ Problem: Weather Observation Station 11
 SELECT DISTINCT CITY FROM STATION where CITY NOT REGEXP '^[aeiouAEIOU]'
 or CITY NOT REGEXP '[aeiou]$';
 ===================================================================================
+Problem: Weather Observation Station 12
+
+SELECT DISTINCT CITY FROM STATION where CITY NOT REGEXP '^[aeiouAEIOU]'
+and CITY NOT REGEXP '[aeiou]$';
+===================================================================================
