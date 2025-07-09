@@ -65,3 +65,7 @@ Problem: Weather Observation Station 12
 SELECT DISTINCT CITY FROM STATION where CITY NOT REGEXP '^[aeiouAEIOU]'
 and CITY NOT REGEXP '[aeiou]$';
 ===================================================================================
+Problem: Higher than 75 marks
+
+SELECT name from students where marks > 75 order by substring(name,-3,3), id;
+===================================================================================
