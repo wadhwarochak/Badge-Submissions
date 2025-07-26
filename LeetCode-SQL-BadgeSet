@@ -10,3 +10,10 @@ from Project p
 JOIN Employee e ON e.employee_id = p.employee_id
 GROUP BY p.project_id;
 ==============================================================================
+1378. Replace Employee ID With The Unique Identifier
+
+SELECT EmployeeUNI.unique_id, Employees.name
+from Employees
+LEFT JOIN EmployeeUNI
+ON EmployeeUNI.id = Employees.id;
+==============================================================================
