@@ -12,3 +12,10 @@ select a.name as Employee from Employee a, Employee b
 where a.managerId = b.id
 and a.salary > b.salary;
 ==============================================================================
+182. Duplicate Emails
+
+SELECT email
+FROM Person
+GROUP BY 1
+HAVING COUNT(*) > 1;
+==============================================================================
