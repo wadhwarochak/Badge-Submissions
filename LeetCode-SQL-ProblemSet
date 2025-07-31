@@ -19,3 +19,9 @@ FROM Person
 GROUP BY 1
 HAVING COUNT(*) > 1;
 ==============================================================================
+183. Customers Who Never Order
+
+select name as Customers from Customers
+where id not in
+(select customerId from orders);
+==============================================================================
