@@ -25,3 +25,8 @@ select name as Customers from Customers
 where id not in
 (select customerId from orders);
 ==============================================================================
+196. Delete Duplicate Emails
+
+delete A from Person A, Person B 
+where A.id > B.id and A.email=B.email;
+==============================================================================
