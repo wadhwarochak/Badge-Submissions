@@ -23,3 +23,7 @@ Japanese Cities Attributes
 
 SELECT NAME FROM CITY where COUNTRYCODE = 'JPN';
 ==============================================================================
+Weather Observation 1
+
+SELECT CITY, STATE from STATION;
+==============================================================================
