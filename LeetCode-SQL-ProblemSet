@@ -30,3 +30,9 @@ where id not in
 delete A from Person A, Person B 
 where A.id > B.id and A.email=B.email;
 ==============================================================================
+511. Game Play Analysis I
+
+select min(event_date) as first_login, player_id
+from activity
+group by player_id;
+==============================================================================
