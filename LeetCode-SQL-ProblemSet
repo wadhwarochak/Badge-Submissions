@@ -36,3 +36,11 @@ select min(event_date) as first_login, player_id
 from activity
 group by player_id;
 ==============================================================================
+
+SELECT Today.id
+FROM Weather AS Today
+INNER JOIN Weather AS Yesterday
+  ON (DATE_SUB(Today.recordDate, INTERVAL 1 DAY) = Yesterday.recordDate)
+WHERE Today.temperature > Yesterday.temperature;
+==============================================================================
+197. Rising Temperature
