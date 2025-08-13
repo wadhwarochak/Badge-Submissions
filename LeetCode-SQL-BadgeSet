@@ -23,6 +23,16 @@ from Employees
 LEFT JOIN EmployeeUNI
 ON EmployeeUNI.id = Employees.id;
 ==============================================================================
+1327. List the Products Ordered in a Period
+
+SELECT product_name, SUM(unit) AS unit
+FROM
+    Orders AS o
+    JOIN Products AS p ON o.product_id = p.product_id
+WHERE DATE_FORMAT(order_date, '%Y-%m') = '2020-02'
+GROUP BY o.product_id
+HAVING unit >= 100;
+==============================================================================
 1517. Find Users With Valid E-Mails
 
 SELECT *
