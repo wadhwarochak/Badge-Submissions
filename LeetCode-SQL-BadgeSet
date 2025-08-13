@@ -5,6 +5,13 @@ SELECT product_id
 FROM Products
 WHERE low_fats = 'Y' AND recyclable = 'Y';
 ==============================================================================
+1068. Product Sales Analysis I
+
+SELECT product_name, year, price
+FROM Product
+LEFT JOIN Sales ON Product.product_id = Sales.product_id
+WHERE year IS NOT NULL AND price IS NOT NULL;
+==============================================================================
 1683. Invalid Tweets
 
 select tweet_id from Tweets where LENGTH(content)>15;
