@@ -5,7 +5,6 @@ SELECT * FROM CITY WHERE population > 100000 and CountryCode = 'USA';
 ==============================================================================
 Revising the Select Query II
 
-
 SELECT NAME FROM CITY WHERE population > 120000 and CountryCode = 'USA';
 ==============================================================================
 Select All
