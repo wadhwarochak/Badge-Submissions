@@ -65,3 +65,19 @@ INNER JOIN Weather AS Yesterday
   ON (DATE_SUB(Today.recordDate, INTERVAL 1 DAY) = Yesterday.recordDate)
 WHERE Today.temperature > Yesterday.temperature;
 ==============================================================================
+1661. Average Time of Process per Machine
+
+SELECT
+  StartActivity.machine_id,
+  ROUND(
+    AVG(EndActivity.timestamp - StartActivity.timestamp),
+    3
+  ) AS processing_time
+FROM Activity AS StartActivity
+INNER JOIN Activity AS EndActivity
+  USING (machine_id, process_id)
+WHERE
+  StartActivity.activity_type = 'start'
+  AND EndActivity.activity_type = 'end'
+GROUP BY 1;
+==============================================================================
