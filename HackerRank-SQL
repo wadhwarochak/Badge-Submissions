@@ -29,6 +29,7 @@ SELECT CITY, STATE from STATION;
 ==============================================================================
 Weather Observation 3
 
+
 SELECT DISTINCT CITY FROM STATION where ID%2 = 0;
 ==============================================================================
 Weather Observation 4
