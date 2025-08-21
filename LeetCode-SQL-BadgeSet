@@ -81,3 +81,11 @@ WHERE
   AND EndActivity.activity_type = 'end'
 GROUP BY 1;
 ==============================================================================
+577. Employee Bonus
+
+SELECT Employee.name, Bonus.bonus
+FROM Employee
+LEFT JOIN Bonus
+  USING (empId)
+WHERE IFNULL(Bonus.bonus, 0) < 1000;
+==============================================================================
