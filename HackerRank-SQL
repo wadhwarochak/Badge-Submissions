@@ -33,5 +33,6 @@ SELECT DISTINCT CITY FROM STATION where ID%2 = 0;
 ==============================================================================
 Weather Observation 4
 
+
 SELECT COUNT(city) - COUNT(DISTINCT(city)) FROM Station;
 ==============================================================================
