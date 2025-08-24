@@ -35,3 +35,7 @@ Weather Observation 4
 
 SELECT COUNT(city) - COUNT(DISTINCT(city)) FROM Station;
 ==============================================================================
+Weather Observation 5
+
+(SELECT CITY, LENGTH(CITY) AS LEN FROM STATION ORDER BY LENGTH(CITY) ASC, CITY ASC LIMIT 1) UNION (SELECT CITY, LENGTH(CITY) AS LEN FROM STATION ORDER BY LENGTH(CITY) DESC, CITY ASC LIMIT 1);
+==============================================================================
