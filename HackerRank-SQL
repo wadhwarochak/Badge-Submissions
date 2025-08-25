@@ -39,3 +39,7 @@ Weather Observation 5
 
 (SELECT CITY, LENGTH(CITY) AS LEN FROM STATION ORDER BY LENGTH(CITY) ASC, CITY ASC LIMIT 1) UNION (SELECT CITY, LENGTH(CITY) AS LEN FROM STATION ORDER BY LENGTH(CITY) DESC, CITY ASC LIMIT 1);
 ==============================================================================
+Weather Observation 6
+
+select t.city from station t where lower(SUBSTR(city,1,1)) in ('a','e','i','o','u')
+==============================================================================
