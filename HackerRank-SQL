@@ -43,3 +43,7 @@ Weather Observation 6
 
 select t.city from station t where lower(SUBSTR(city,1,1)) in ('a','e','i','o','u')
 ==============================================================================
+Weather Observation 7
+
+SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '[aeiouAEIOU]$';
+==============================================================================
