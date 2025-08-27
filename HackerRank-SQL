@@ -47,3 +47,7 @@ Weather Observation 7
 
 SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '[aeiouAEIOU]$';
 ==============================================================================
+Weather Observation 8
+
+SELECT DISTINCT CITY FROM STATION WHERE SUBSTRING(CITY,1,1) in('A','E','I','O','U') AND SUBSTRING(REVERSE(CITY),1,1) in('A','E','I','O','U');
+==============================================================================
