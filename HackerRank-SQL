@@ -56,3 +56,10 @@ Weather Observation 9
 SELECT DISTINCT CITY FROM STATION
 WHERE CITY REGEXP '^[^aeiou]';
 ==============================================================================
+Weather Observation 10
+
+SELECT distinct city
+FROM station
+WHERE right(city,1) not regexp 'a|e|i|o|u'
+GROUP BY city
+==============================================================================
