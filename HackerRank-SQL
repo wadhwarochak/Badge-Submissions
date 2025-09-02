@@ -63,7 +63,6 @@ FROM station
 WHERE right(city,1) not regexp 'a|e|i|o|u'
 GROUP BY city
 ==============================================================================
-
 Weather Observation 11
 
 SELECT distinct city
