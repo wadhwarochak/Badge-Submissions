@@ -200,6 +200,14 @@ INNER JOIN Activity
     Players.player_id = Activity.player_id
     AND DATEDIFF(Players.first_login, Activity.event_date) = -1)
 ==============================================================================
+2356. Number of Unique Subjects Taught by Each Teacher
+
+SELECT
+  teacher_id,
+  COUNT(DISTINCT subject_id) AS cnt
+FROM Teacher
+GROUP BY 1;
+
 ==============================================================================
 ==============================================================================
 ==============================================================================
