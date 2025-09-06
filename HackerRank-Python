@@ -20,3 +20,9 @@ if __name__ == '__main__':
     else:
         print("Weird")
 ==============================================================================
+Arithmetic Operators
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    print(f"{a+b}\n{a-b}\n{b*a}")
