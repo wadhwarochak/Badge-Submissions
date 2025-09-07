@@ -218,5 +218,22 @@ FROM Activity
 WHERE activity_date BETWEEN '2019-06-28' AND  '2019-07-27'
 GROUP BY 1;
 ==============================================================================
+1070. Product Sales Analysis III
+
+# Write your MySQL query statement below
+SELECT
+    product_id,
+    year AS first_year,
+    quantity,
+    price
+FROM Sales
+WHERE
+    (product_id, year) IN (
+        SELECT
+            product_id,
+            MIN(year) AS year
+        FROM Sales
+        GROUP BY product_id
+    );
 ==============================================================================
 
