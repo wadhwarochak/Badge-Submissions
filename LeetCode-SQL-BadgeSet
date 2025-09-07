@@ -220,7 +220,6 @@ GROUP BY 1;
 ==============================================================================
 1070. Product Sales Analysis III
 
-# Write your MySQL query statement below
 SELECT
     product_id,
     year AS first_year,
