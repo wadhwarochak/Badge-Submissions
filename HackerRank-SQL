@@ -3,3 +3,7 @@ Revising the Select Query I
 
 SELECT * FROM CITY WHERE COUNTRYCODE = 'USA' and POPULATION > 100000;
 ==============================================================================
+Revising the Select Query II
+
+SELECT NAME from CITY WHERE POPULATION > 120000 AND COUNTRYCODE = 'USA';
+==============================================================================
