@@ -45,3 +45,31 @@ else
     echo "X is equal to Y"
 fi
 ==============================================================================
+Getting started with conditionals
+
+read var
+
+if [ "$var" = "Y" -o "$var" == "y" ]; then
+  echo "YES"
+fi
+
+if [ "$var" = "N" -o "$var" == "n" ]; then
+  echo "NO"
+fi
+==============================================================================
+More on Conditionals
+
+read x
+read y
+read z
+
+if [[ $x == $y && $x == $z ]]
+then 
+   echo "EQUILATERAL"
+elif [[ $x == $y || $x == $z || $y == $z ]]
+   then
+     echo "ISOSCELES"
+    else
+      echo "SCALENE"
+fi
+==============================================================================
