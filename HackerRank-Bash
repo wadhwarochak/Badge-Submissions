@@ -3,26 +3,59 @@ Let's Echo
 
 echo "HELLO"
 ==============================================================================
-Looping and Skipping
-
-for i in {1..99..2}
-do
-    echo $i
-done
-==============================================================================
-Personalized Echo
+A Personalized Echo
 
 read name
 echo "Welcome $name"
 ==============================================================================
-Looping with Numbers
+Looping and skipping
+
+for i in {1..100}
+do
+    remainder=$((i % 2))
+    if [ $remainder -ne 0 ]; then
+        echo $i
+    fi
+done
+==============================================================================
+Looping with numbers
 
 for i in {1..50}
 do
     echo $i
 done
 ==============================================================================
-The world of numbers
+Getting started with conditionals
+
+read char
+
+if [[ $char = 'Y' || $char = 'y' ]];
+then
+    echo YES
+elif [[ $char = 'N' || $char = 'n' ]];
+then
+    echo NO
+fi
+==============================================================================
+More on conditionals
+
+read x
+read y
+read z
+
+if [[ $x == $y && $y == $z ]]
+then
+    echo EQUILATERAL
+else
+    if [[ $x == $y || $y == $z || $x == $z ]]
+    then
+        echo ISOSCELES
+    else
+        echo SCALENE
+    fi
+fi
+==============================================================================
+The World of Numbers
 
 read X
 read Y
@@ -45,31 +78,17 @@ else
     echo "X is equal to Y"
 fi
 ==============================================================================
-Getting started with conditionals
+Compute the Average
 
-read var
+read num
+sum=0
 
-if [ "$var" = "Y" -o "$var" == "y" ]; then
-  echo "YES"
-fi
+for ((i=1;i<=$num;i++))
+do
+    read x
+    sum=$(($sum + $x))
+done
+final=$(($sum / $num))
 
-if [ "$var" = "N" -o "$var" == "n" ]; then
-  echo "NO"
-fi
-==============================================================================
-More on Conditionals
-
-read x
-read y
-read z
-
-if [[ $x == $y && $x == $z ]]
-then 
-   echo "EQUILATERAL"
-elif [[ $x == $y || $x == $z || $y == $z ]]
-   then
-     echo "ISOSCELES"
-    else
-      echo "SCALENE"
-fi
+printf "%.3f" $(echo "$sum/$num" | bc -l)
 ==============================================================================
