@@ -92,3 +92,60 @@ final=$(($sum / $num))
 
 printf "%.3f" $(echo "$sum/$num" | bc -l)
 ==============================================================================
+Cut #1 - Print third character of each line
+
+cut -c3
+==============================================================================
+Cut #1 - Print 2nd and 7th character
+
+cut -c2,7
+==============================================================================
+Cut #3 - Starting from 2nd till 7th
+
+cut -c2-7
+==============================================================================
+Cut #4 - first four characters from each line of text.
+
+cut -c1-4
+==============================================================================
+Cut #5 - Given a tab delimited file with several columns (tsv format) print the first three fields.
+
+cut -f1-3
+==============================================================================
+Cut #6 - print the characters from thirteenth position to the end.
+
+cut -c13-
+==============================================================================
+Cut #7 - identify and display its fourth word
+
+cut -d' ' -f4
+==============================================================================
+Cut #8 - identify and display its first three words.
+
+cut -d' ' -f1-3
+
+==============================================================================
+Cut #9 - Given a tab delimited file with several columns (tsv format) print the fields from second fields to last field.
+
+cut -f2-
+==============================================================================
+Head of a Text File #1 - Display first 20 lines
+
+head -n 20
+==============================================================================
+Head of a Text File #2 - Display first 20 characters
+
+head -c 20
+==============================================================================
+Middle of a Text File
+
+head -n 22 | tail -n 11
+==============================================================================
+Tail of a Text File # - Last 20 lines
+
+tail -n 20
+==============================================================================
+Tail of a Text File # - Last 20 characters
+
+tail  -c 20
+==============================================================================
