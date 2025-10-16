@@ -15,3 +15,15 @@ Select By ID
 
 SELECT * FROM CITY where ID = 1661;
 ==============================================================================
+Japanese City Attributes
+
+SELECT * FROM CITY where COUNTRYCODE = 'JPN'
+==============================================================================
+Japanese City Names
+
+SELECT NAME FROM CITY where COUNTRYCODE = 'JPN'
+==============================================================================
+Weather Observation - 1
+
+SELECT CITY, STATE FROM STATION;
+==============================================================================

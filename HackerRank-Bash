@@ -149,3 +149,43 @@ Tail of a Text File # - Last 20 characters
 
 tail  -c 20
 ==============================================================================
+replace all parentheses ()  with box brackets  []
+
+tr '()' '[]'
+==============================================================================
+Delete all the lowercase characters in the given block of text.
+
+tr -d 'a-z'
+==============================================================================
+Replace all sequences of multiple spaces with just one space.
+
+tr -s ' '
+==============================================================================
+Sort #1 order the lines in lexicographical order.
+
+sort
+==============================================================================
+Sort #2  order the lines in reverse lexicographical order 
+
+sort -r
+==============================================================================
+Sort #3  lines reordered in numerically ascending order.
+
+sort -n
+==============================================================================
+Sort #4  with lines re-ordered in descending order (numerically).
+
+sort -nr
+==============================================================================
+Sort #5 Rearrange the rows of the table in descending order of the values for the average temperature in January
+
+sort -rnk2 -t $'\t'
+==============================================================================
+Sort #6 Sort the data in ascending order of the average monthly temperature in January.
+
+sort -t $'\t' -k2n
+==============================================================================
+Sort #7 Sort the data in descending order of the average monthly temperature in January.
+
+sort -k2 -n -r -t '|'
+==============================================================================
