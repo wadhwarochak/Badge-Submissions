@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Script: push_to_github.sh
 # Purpose: Commit and push recent changes to GitHub
 
