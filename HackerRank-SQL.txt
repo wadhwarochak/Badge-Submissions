@@ -27,3 +27,11 @@ Weather Observation - 1
 
 SELECT CITY, STATE FROM STATION;
 =========================================================================
+Weather Observation - 3
+
+SELECT DISTINCT CITY FROM STATION where ID%2=0;
+=========================================================================
+Weather Observation - 4
+
+SELECT COUNT(CITY) - COUNT( DISTINCT CITY) FROM STATION
+=========================================================================
