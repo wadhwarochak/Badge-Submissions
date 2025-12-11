@@ -7,3 +7,14 @@ Revising the Select Query - II
 
 SELECT NAME FROM CITY where population > 120000 and CountryCode = 'USA';
 =========================================================================
+Select All
+
+SELECT * FROM CITY;
+=========================================================================
+Average Population of each continent
+
+select country.continent, floor(avg(city.population)) from city
+inner join country
+on city.countrycode = country.code
+group by country.continent
+=========================================================================
