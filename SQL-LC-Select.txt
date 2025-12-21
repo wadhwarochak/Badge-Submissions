@@ -11,6 +11,15 @@ SELECT name from Customer where IFNULL(referee_id, 0) <> 2
 # <> is same as !=
 # if null, converts to 0
 ===============================================================
+595. Big Countries
+
+SELECT name, population, area from World where area >= 3000000 or population >= 25000000;
+
+SELECT name, population, area from World where area >= 3000000
+UNION
+SELECT name, population, area from World where population >= 25000000;
+
+
 ===============================================================
 ===============================================================
 ===============================================================
