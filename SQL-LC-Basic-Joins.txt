@@ -1,25 +1,13 @@
 ===============================================================
-Revising the Select Query-I
+1378. Replace Employee ID With The Unique Identifier
 
-SELECT * FROM CITY WHERE CountryCode = 'USA' and population > 100000;
+SELECT eu.unique_id as unique_id, e.name as name
+FROM Employees e
+LEFT JOIN EmployeeUNI eu
+ON e.id=eu.id;
 ===============================================================
-Revising the Select Query-II
-
-SELECT name from CITY where population > 120000 and CountryCode = 'USA';
 ===============================================================
-Select All
-
-SELECT * FROM CITY;
 ===============================================================
-Select By ID
-
-SELECT * FROM CITY where ID = 1661;
 ===============================================================
-Japanese City Attributes
-
-SELECT * FROM CITY where COUNTRYCODE = 'JPN';
 ===============================================================
-Japanese City Names
-
-SELECT NAME FROM CITY where COUNTRYCODE = 'JPN';
 ===============================================================
