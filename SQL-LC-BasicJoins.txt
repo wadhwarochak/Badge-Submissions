@@ -59,5 +59,13 @@ AND a1.machine_id  = a2.machine_id
 and a1.activity_type='start' and a2.activity_type='end'
 GROUP BY a1.machine_id;
 ===============================================================
+577. Employee Bonus
+
+SELECT e.name,b.bonus
+FROM Employee e
+LEFT JOIN Bonus b
+ON e.empId = b.empId
+WHERE b.bonus is null OR  b.bonus < 1000
 ===============================================================
+
 ===============================================================
