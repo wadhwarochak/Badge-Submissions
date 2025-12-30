@@ -47,3 +47,9 @@ SELECT distinct CITY from station WHERE
 (city like 'A%' or city like 'E%' or city like 'I%' or city like 'O%' or
 city like 'U%')
 ===============================================================
+Weather Observation Station 7
+
+SELECT distinct CITY from station WHERE
+(city like '%A' or city like '%E' or city like '%I' or city like '%O' or
+city like '%U')
+===============================================================
