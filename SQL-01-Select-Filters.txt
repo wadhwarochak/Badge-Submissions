@@ -1,0 +1,33 @@
+1757. Recyclable and Low Fat Products
+SELECT product_id FROM Products where low_fats = 'Y' and recyclable = 'Y';
+===============================================================
+Revising Select Query 1
+SELECT * FROM CITY WHERE CountryCode = 'USA' AND population > 100000;
+===============================================================
+38 - Product Reviews
+SELECT *
+FROM product_reviews
+WHERE (
+        review_text LIKE '%excellent%' 
+        OR review_text LIKE '%amazing%'
+      )
+  AND review_text NOT LIKE '%not excellent%'
+  AND review_text NOT LIKE '%not amazing%';
+===============================================================
+95 - Electronics Items Sale
+select category, round(avg(price),2) as average_price
+from electronic_items
+where warranty_months >=12
+group by category
+having avg(price) > 500 and sum(quantity)>20
+order by avg(price) desc;
+===============================================================
+102 - Users With Valid Passwords
+select user_id, user_name from user_passwords
+where LENGTH(password) >= 8
+AND REGEXP_LIKE(password, '[a-z]')
+AND REGEXP_LIKE(password, '[A-Z]')
+AND password REGEXP '[0-9]'
+AND password REGEXP '[@#$%^&*]'
+and password NOT LIKE '% %';
+===============================================================
