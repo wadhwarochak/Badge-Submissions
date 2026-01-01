@@ -1,33 +1,33 @@
-1757. Recyclable and Low Fat Products
-SELECT product_id FROM Products where low_fats = 'Y' and recyclable = 'Y';
 ===============================================================
-Revising Select Query 1
-SELECT * FROM CITY WHERE CountryCode = 'USA' AND population > 100000;
+Revising the Select Query I
+
+SELECT * FROM CITY where population > 100000 and CountryCode  = 'USA';
 ===============================================================
 38 - Product Reviews
-SELECT *
-FROM product_reviews
-WHERE (
-        review_text LIKE '%excellent%' 
-        OR review_text LIKE '%amazing%'
-      )
-  AND review_text NOT LIKE '%not excellent%'
-  AND review_text NOT LIKE '%not amazing%';
+
+select * from product_reviews
+where (lower(review_text) LIKE '%excellent%'
+OR lower(review_text) LIKE '%amazing%')
+AND lower(review_text) NOT LIKE '%not excellent%'
+AND lower(review_text) NOT LIKE '%not amazing%'
+order by review_id;
 ===============================================================
-95 - Electronics Items Sale
-select category, round(avg(price),2) as average_price
-from electronic_items
-where warranty_months >=12
-group by category
-having avg(price) > 500 and sum(quantity)>20
-order by avg(price) desc;
+105 - Student Major Subject
+
+select student_id, course_id from student_courses
+where major_flag  = 'Y'
+OR student_id IN (SELECT student_id from student_courses GROUP BY student_id having count(course_id) = 1);
 ===============================================================
 102 - Users With Valid Passwords
-select user_id, user_name from user_passwords
-where LENGTH(password) >= 8
-AND REGEXP_LIKE(password, '[a-z]')
-AND REGEXP_LIKE(password, '[A-Z]')
-AND password REGEXP '[0-9]'
-AND password REGEXP '[@#$%^&*]'
+
+select user_id,user_name  from user_passwords
+where length(password)>=8
+and password REGEXP '[A-Za-z]'
+and password REGEXP '[0-9]'
+and password REGEXP '[@#$%^&*]'
 and password NOT LIKE '% %';
+===============================================================
+1757. Recyclable and Low Fat Products
+
+SELECT product_id from Products where low_fats = 'Y' and recyclable  = 'Y';
 ===============================================================
