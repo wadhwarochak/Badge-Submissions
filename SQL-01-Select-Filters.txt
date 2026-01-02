@@ -31,3 +31,32 @@ and password NOT LIKE '% %';
 
 SELECT product_id from Products where low_fats = 'Y' and recyclable  = 'Y';
 ===============================================================
+103 - Employee Mentor
+
+SELECT name from employees where mentor_id !=3 or mentor_id is null;
+===============================================================
+95 - Electronics Items Sale
+
+SELECT category, round(AVG(price),2) as average_price
+from electronic_items
+where warranty_months >=12
+group by category
+having average_price > 500 and sum(quantity)>=20
+order by average_price desc;
+
+===============================================================
+106 - Subject Average Score
+
+SELECT course_name, avg(score) as avg_score from students
+where student_id IN (SELECT student_id from students where score < 70) group by course_name having avg_score > 70 order by avg_score desc;
+===============================================================
+Revising the Select Query II
+
+SELECT NAME FROM CITY where population > 120000 and CountryCode = 'USA';
+===============================================================
+584. Find Customer Referee
+
+SELECT name from Customer where referee_id !=2 or referee_id is null;
+
+SELECT name from Customer where IFNULL(referee_id,0) <> 2
+===============================================================

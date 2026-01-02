@@ -8,3 +8,11 @@ class Solution:
                 if((nums[i]+nums[j])==target):
                     return [i,j]
 ===============================================================
+1108. Defanging an IP Address
+
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        my_list = address.split(".")
+        new_address = "[.]".join(my_list)
+        return new_address
+===============================================================
