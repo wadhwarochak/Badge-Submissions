@@ -65,3 +65,23 @@ AND MONTH(order_date)=2
 AND DAYOFWEEK(order_date) BETWEEN 2 and 6
 group by category order by total_sales;
 ===============================================================
+71 - Department Average Salary
+
+SELECT d.department_name, round(avg(salary),2) as average_salary 
+FROM employees e
+inner join departments d on e.department_id = d.department_id
+group by d.department_name
+having count(*)>2
+order by average_salary desc;
+===============================================================
+72 - Product Sales
+
+
+SELECT p.product_name, sum(s.quantity *p.price) as total_sales_amount
+FROM sales s
+
+INNER JOIN products p
+    ON p.product_id = s.product_id
+group by p.product_name
+order by p.product_name;
+===============================================================
