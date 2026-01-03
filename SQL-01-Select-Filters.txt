@@ -60,3 +60,32 @@ SELECT name from Customer where referee_id !=2 or referee_id is null;
 
 SELECT name from Customer where IFNULL(referee_id,0) <> 2
 ===============================================================
+595. Big Countries
+
+select name, population, area from World where area >=3000000   or population  >=25000000;
+
+select name, population, area from World where area >=3000000 
+UNION
+select name, population, area from World where population  >=25000000;
+===============================================================
+SELECT ALL
+
+SELECT * FROM CITY;
+===============================================================
+6 - Electricity Consumption
+
+SELECT household_id, left(billing_period, 4) as bill_year, sum(consumption_kwh) as consumption_kwh, sum(total_cost) as total_cost, avg(consumption_kwh) as avg_consumption_kwh from electricity_bill group by household_id, left(billing_period, 4)
+order by household_id, bill_year;
+===============================================================
+12 - Deliveroo Top Customer
+
+select customer_id, sum(total_cost) as total_expense from orders group by customer_id order by total_expense DESC LIMIT 1;
+===============================================================
+61 - Category Sales (Part 1)
+
+select category, sum(amount) as total_sales from sales
+WHERE YEAR(order_date)=2022
+AND MONTH(order_date)=2
+AND DAYOFWEEK(order_date) BETWEEN 2 and 6
+group by category order by total_sales;
+===============================================================
