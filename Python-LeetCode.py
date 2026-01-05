@@ -35,3 +35,16 @@ class Solution:
         
         return numReversed == originalX
 ===============================================================
+2011. Final Value of Variable After Performing Operations
+
+class Solution:
+    def finalValueAfterOperations(self, operations: List[str]) -> int:
+        count = 0
+        length = len(operations)
+        for i in range(length):
+            if (operations[i]=='++X') or (operations[i]=='X++'):
+                count=count+1
+            elif (operations[i]=='--X') or (operations[i]=='X--'):
+                count=count-1
+        return count
+===============================================================

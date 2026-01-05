@@ -16,3 +16,10 @@ SELECT product_id from Products where low_fats = 'Y' and recyclable  = 'Y';
 SELECT name from Customer where referee_id !=2 or referee_id is null;
 
 SELECT name from Customer where IFNULL(referee_id,0) <> 2
+===============================================================
+1148. Article Views I
+
+select distinct author_id as id
+from Views where author_id = viewer_id
+order by id
+===============================================================
