@@ -19,8 +19,7 @@ Japanese Cities Attributes
 
 SELECT * FROM CITY where COUNTRYCODE = 'JPN';
 ===============================================================
-1683. Invalid Tweets
+Japanese City Names
 
-SELECT tweet_id  from Tweets
-where char_length(content) > 15
+SELECT NAME FROM CITY where COUNTRYCODE = 'JPN';
 ===============================================================

@@ -48,3 +48,23 @@ class Solution:
                 count=count-1
         return count
 ===============================================================
+1480. Running Sum of 1d Array
+
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        for i in range(1,len(nums)):
+            nums[i]=nums[i]+nums[i-1]
+        return nums
+
+===============================================================
+771. Jewels and Stones
+
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        count=0
+        for i in range(len(stones)):
+            for j in range(len(jewels)):
+                if(stones[i]==jewels[j]):
+                    count+=1
+        return count
+===============================================================

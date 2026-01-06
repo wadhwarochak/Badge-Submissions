@@ -199,3 +199,21 @@ with cte as (select city_id, year(min(business_date)) as year_opening from busin
 
 select year_opening as first_operation_year, count(*) as no_of_new_cities from cte group by year_opening;
 ===============================================================
+34 - Employee vs Manager
+
+select e.emp_name, e.salary,e.joining_date, m.salary, m.joining_date from employee e
+inner join employee m
+on e.manager_id = m .emp_id
+where e.salary > m.salary
+and e.joining_date > m.joining_date
+order by e.emp_name;
+===============================================================
+29 - Software vs Data Analytics Engineers
+
+select
+count(case when JobTitle like 'software%' then 1 end) as software_engineers,
+count(case when JobTitle like 'data%' then 1 end) as data_people,	
+count(case when JobTitle like '%Manager%' then 1 end) as managers
+from employees
+===============================================================
+36 - Airbnb Business

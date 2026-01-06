@@ -23,3 +23,15 @@ select distinct author_id as id
 from Views where author_id = viewer_id
 order by id
 ===============================================================
+1378. Replace Employee ID With The Unique Identifier
+
+SELECT eu.unique_id, e.name
+from  Employees e
+LEFT JOIN EmployeeUNI eu
+ON e.id = eu.id;
+===============================================================
+1683. Invalid Tweets
+
+SELECT tweet_id  from Tweets
+where char_length(content) > 15
+===============================================================
