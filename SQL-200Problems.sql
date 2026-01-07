@@ -216,4 +216,27 @@ count(case when JobTitle like 'data%' then 1 end) as data_people,
 count(case when JobTitle like '%Manager%' then 1 end) as managers
 from employees
 ===============================================================
-36 - Airbnb Business
+33 - Average Order Value
+
+with cte as (
+select transaction_date, avg(transaction_amount) as aov
+ from transactions
+ group by transaction_date
+)
+, cte1 as (
+select *
+,row_number() over(order by aov) as rn
+,max(aov) over() as highest_aov
+from cte 
+)
+select transaction_date,round(aov,2) as aov,round(highest_aov-aov,2) as diff_from_highest_aov
+from cte1
+where rn=1;
+===============================================================
+31 - Highly Paid Employees
+
+select * from employee e1
+where salary > (select avg(salary) from employee e2
+where e1.department != e2.department);
+===============================================================
+
