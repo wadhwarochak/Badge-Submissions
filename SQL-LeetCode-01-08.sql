@@ -1,6 +1,6 @@
 ===============================================================
-Revising the Select Query I
+1757. Recyclable and Low Fat Products
 
-SELECT * FROM CITY where CountryCode = 'USA' and population > 100000;
+SELECT product_id from Products where low_fats='Y' and recyclable='Y';
 ===============================================================
 ===============================================================
