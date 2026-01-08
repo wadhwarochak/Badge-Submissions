@@ -47,3 +47,12 @@ from Sales s
 LEFT JOIN Product p
 USING(product_id);
 ===============================================================
+1581. Customer Who Visited but Did Not Make Any Transactions
+
+SELECT v.customer_id, COUNT(customer_id) as count_no_trans
+FROM Visits v
+LEFT JOIN Transactions t
+on v.visit_id = t.visit_id
+WHERE t.transaction_id is NULL
+GROUP BY v.customer_id
+===============================================================
