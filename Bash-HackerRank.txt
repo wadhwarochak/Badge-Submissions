@@ -14,12 +14,5 @@ Personalized echo
 
 read name
 echo "Welcome $name"
-===============================================================
-Looping with Numbers
 
-
-for ((i=1; i<=50; i=i+1))
-do
-  echo $i
-done
 ===============================================================

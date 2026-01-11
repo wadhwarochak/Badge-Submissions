@@ -74,3 +74,13 @@ class Solution:
     def toLowerCase(self, s: str) -> str:
         return s.lower()
 ===============================================================
+557. Reverse Words in a String III
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        temp = s.split(' ')
+        result = []
+        for i in range(len(temp)):
+            result.append(temp[i][::-1])
+        return " ".join(result)
+===============================================================
