@@ -70,4 +70,14 @@ FROM weather w1 INNER JOIN Weather w2
 WHERE SUBDATE(w2.recordDate,1) = w2.recordDate
 AND w1.temperature > w2.temperature;
 ===============================================================
+1661. Average Time of Process per Machine
+
+SELECT a1.machine_id, ROUND(AVG(a1.timestamp - a2.timestamp),3) as processing_time
+FROM Activity a1
+INNER JOIN Activity a2
+on a1.process_id = a2.process_id
+AND a1.machine_id = a2.machine_id
+AND a1.activity_type = 'end'
+AND a2.activity_type = 'start'
+group by a1.machine_id;
 ===============================================================
