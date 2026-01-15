@@ -84,3 +84,12 @@ class Solution:
             result.append(temp[i][::-1])
         return " ".join(result)
 ===============================================================
+1528. Shuffle String
+
+class Solution:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        result = ''
+        for i in range(len(indices)):
+            result=result+s[indices.index(i)]
+        return result
+===============================================================
