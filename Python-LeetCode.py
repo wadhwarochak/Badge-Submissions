@@ -101,3 +101,24 @@ class Solution:
             n=n/2
         return n==1
 ===============================================================
+412. Fizz Buzz
+
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        result = []
+        for i in range(1,n+1):
+            result.append(i)
+
+        
+        for j in range(len(result)):
+            if (result[j]%3 ==0 and result[j]%5==0):
+                result[j]="FizzBuzz"
+            elif (result[j]%5 ==0):
+                result[j]="Buzz"
+            elif (result[j]%3 ==0):
+                result[j]="Fizz"
+            else:
+                result[j]=str(result[j])
+        return result
+
+===============================================================
